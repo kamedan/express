@@ -29,7 +29,7 @@ router.route('/login').post(function(req, res){
 });
 
 
-router.get('/profile', function(req, res, next){
+/*router.get('/profile', function(req, res, next){
 
     User.findById({_id: req.params.id}, function(err, users){
         if (err) {
@@ -41,7 +41,7 @@ router.get('/profile', function(req, res, next){
     });
 
    //return res.json(req.user);
-});
+});*/
 
 
 router.route('/').get(function(req, res){

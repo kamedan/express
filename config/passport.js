@@ -15,7 +15,6 @@
     });
 
 
-
     //midlleware
 
     passport.use('local-login', new LocalStrategy({
@@ -34,11 +33,12 @@
             }
 
             if (!user.comparePassword(password)) {
-                return done(null, false, res.send({message :'mot de passe incorrect ! '}));
+                return done(null, false, 'mot de passe incorrect ! ');
             }
             return done(null, user);
         });
     }));
+
 
 
     //function validate

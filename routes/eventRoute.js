@@ -25,6 +25,10 @@ router.route('/:id').get(function(req, res){
     return eventCtr.getEventById(req, res);
 });
 
+router.route('/user/:id').get(function(req,res){
+   return eventCtr.getEventsByUser(req, res);
+});
+
 
 
 module.exports = router;

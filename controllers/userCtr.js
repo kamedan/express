@@ -22,7 +22,7 @@ exports.logout = function(req, res){
 exports.loginUserFail = function(req, res){
     if(!req.user){
         //res.redirect('/');
-        res.send({message :'utilisateur nnest pas trouvé'});
+        res.send({message :'utilisateur nest pas trouvé'});
     }
 }
 
@@ -40,13 +40,15 @@ exports.getUser = function(req, res){
     });
 }
 
+
+
 //ajouter un utilisateur
 exports.createUser = function(req, res, next){
     var user = new User(req.body);
 
     User.findOne({email: req.body.email}, function(err, existingUser){
         if(existingUser){
-            return res.send({message :'utlisateur existe deja ! '})
+            return res.send({message :'utlisateur existe deja ! '});
 
             //return req.flash('errors', 'utilisateur existe deja ')
         }else{
@@ -59,8 +61,6 @@ exports.createUser = function(req, res, next){
             });
         }
     });
-
-
 }
 
 //modifier un utilisateur

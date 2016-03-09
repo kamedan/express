@@ -9,7 +9,7 @@ var Schema = mongoose.Schema;
 //schéma d'un utilisateur
 var userSchema = new Schema({
 	name: {type: String, required: true},
-	prename : {type: String, required: true},
+	lastname : {type: String, required: true},
 	email : {type: String, required: true},
 	password : {type: String, required: true},
 	role: String,
