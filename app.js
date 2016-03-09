@@ -20,7 +20,8 @@ var userRoute = require('./routes/userRoute.js');
 var eventRoute = require('./routes/eventRoute.js');
 var categoryRoute = require('./routes/categoryRoute.js');
 var appelOffreRoute = require('./routes/appelOffreRoute.js');
-
+var devisRoute = require('./routes/devisRoute.js')
+var productDevisRoute = require('./routes/productDevisRoute.js')
 
 var app = express();
 
@@ -63,6 +64,10 @@ app.use('/user', userRoute);
 app.use('/event', eventRoute);
 app.use('/category', categoryRoute);
 app.use('/appeloffre', appelOffreRoute);
+app.use('/devis', devisRoute);
+app.use('/productd', productDevisRoute);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
